@@ -4,10 +4,7 @@ li {
 }
 header {
   color: whitesmoke;
-  background-position: center;
-  background-repeat:no-repeat;
-  background-size: cover;
-  background-color: rgba(10, 10, 10, 1);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,14 +14,13 @@ header {
   height: 100%;
 }
 
-#app video {
+video {
   position: absolute;
-  top: 0;
-  left: 0;
+  overflow: hidden;
   width: 100%;
-  height: 120%;
-  overflow: auto;
-  border: none;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 nav ul {
