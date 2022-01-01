@@ -1,4 +1,8 @@
 import { utils } from './util.js'
+import { about } from './about.js'
+import { work } from './work.js'
+import { contact } from './contact.js';
+
 const app = {
     randUrl: (function () {
         const videoEl = document.getElementById('videoBg');
@@ -8,11 +12,27 @@ const app = {
     })(),
     aClick: (function () {
         window.addEventListener('click', event => {
+            const main = document.getElementById('main');
             if (event.target.href !== undefined && event.target.href !== '') {
-                const main = document.getElementById('main');
-                const header = document.getElementById('header');
-                main.style.width = '100%';
-                header.style.display = 'none';
+                const link = event.target.innerHTML;
+                switch (link) {
+                    case utils._navigation.about:
+                        document.getElementById('header').style.display = 'none';
+                        main.innerHTML = about.content;
+                        main.style.display = 'flex';
+                        break;
+                    case utils._navigation.work:
+                        document.getElementById('header').style.display = 'none';
+                        main.innerHTML = work.content;
+                        main.style.display = 'flex';
+                        break;
+                    case utils._navigation.contact:
+                        document.getElementById('header').style.display = 'none';
+                        main.innerHTML = contact.content;
+                        main.style.display = 'flex';
+                        break;
+
+                }
             }
         });
     })()
