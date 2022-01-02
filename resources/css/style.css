@@ -2,6 +2,7 @@ ul,
 li {
   list-style: none;
 }
+
 h1,
 h2,
 h3,
@@ -9,6 +10,7 @@ h4,
 h5,
 h6,
 p {
+  color: whitesmoke;
 }
 
 video {
@@ -22,7 +24,7 @@ video {
 
 header {
   color: whitesmoke;
-  background-color: hsla(180, 100%, 10%, 0.8);
+  background-color: hsla(0, 10%, 5%, .9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,40 +54,36 @@ nav ul li a:visited {
 }
 
 #main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: hsla(125, 25%, 50%, 0.8);
-  width: 100%;
-  height: 100%;
-  display: none;
-  flex-direction: column;
+  background-color: hsla(125, 5%, 30%, 0.8);
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-}
-
-* {
-  color: whitesmoke;
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 #contact input[type="text"],
 #contact input[type="email"],
 #contact textarea {
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.9);
-  color: black;
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 3px;
+  color: black;
 }
 
 #contact input[type="submit"] {
-  border-radius: 3px;
   border: 3px solid hsla(125, 25%, 50%, 0.8);
-  color: whitesmoke;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  color: whitesmoke;
   cursor: pointer;
   float: right;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #contact input[type="submit"]:hover {
@@ -94,17 +92,16 @@ nav ul li a:visited {
 
 /* hidden menu*/
 .hidden-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: hsla(125, 0%, 25%, 0.8);
-  width: auto;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  position: absolute;
   padding: 1rem;
   z-index: 20;
-  opacity: 0;
+  width: auto;
+  left: 0;
+  top: 0;
 }
 
 .hidden-menu h1 {
@@ -113,9 +110,9 @@ nav ul li a:visited {
 }
 
 .hidden-menu nav ul {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  display: flex;
 }
 
 .hidden-menu ul li a {
@@ -123,9 +120,9 @@ nav ul li a:visited {
 }
 
 .hidden-menu ul li a:hover {
-  color: whitesmoke;
   border-left: 1px solid whitesmoke;
   border-bottom: none;
+  color: whitesmoke;
 }
 
 .hide {
@@ -133,14 +130,14 @@ nav ul li a:visited {
 }
 
 #show-hide {
-  padding: 0.5rem 0.2rem;
-  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   background-color: rgba(0, 0, 0, 0.3);
   color: rgba(255, 255, 255, 0.3);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0 1rem 1rem 0;
+  padding: 0.4rem 0.2rem;
   position: fixed;
-  top: 50%;
   cursor: pointer;
   display: none;
   z-index: 100;
+  top: 50%;
 }

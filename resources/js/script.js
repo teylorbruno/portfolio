@@ -45,7 +45,7 @@ const app = {
         const showHideBtn = document.getElementById('show-hide')
         const header = document.getElementById('header');
         showHideBtn.addEventListener('mouseover', function () {
-            showHideBtn.style.paddingLeft = '0.5rem';
+            showHideBtn.style.paddingLeft = '0.4rem';
             showHideBtn.style.backgroundColor = 'rgba(0,0,0,0.5)';
         });
         showHideBtn.addEventListener('mouseout', function () {
@@ -53,13 +53,12 @@ const app = {
             showHideBtn.style.backgroundColor = 'rgba(0,0,0,0.3)';
         });
         showHideBtn.addEventListener('click', function () {
-            debugger;
-            header.classList.add('hidden-menu');
-            header.classList.remove('hide');
-            if(header.style.opacity < 1){
-                utils.fadeIn(header, 500);
-            }else{
-                utils.fadeOut(header, 500);
+            if (header.classList.contains('hide')) {
+                header.classList.remove('hide');
+                header.classList.add('hidden-menu');
+            } else {
+                header.classList.remove('hidden-menu');
+                header.classList.add('hide');
             }
         });
     })()
