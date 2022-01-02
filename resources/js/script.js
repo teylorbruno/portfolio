@@ -1,7 +1,7 @@
 import { utils } from './util.js'
-import { about } from './about.js'
-import { work } from './work.js'
-import { contact } from './contact.js';
+import { about } from './frontend/about.js'
+import { work } from './frontend/work.js'
+import { contact } from './frontend/contact.js';
 
 const app = {
     randUrl: (function () {
@@ -36,6 +36,10 @@ const app = {
                         main.style.display = 'flex';
                         showMenu.style.display = 'block';
                         break;
+                    default:
+                        alert('admin');
+                        break;
+
 
                 }
             }
@@ -45,11 +49,19 @@ const app = {
         const showHideBtn = document.getElementById('show-hide')
         const header = document.getElementById('header');
         showHideBtn.addEventListener('mouseover', function () {
-            showHideBtn.style.paddingLeft = '0.4rem';
+            if (window.innerWidth <= 600) {
+                showHideBtn.style.paddingLeft = '1.5rem';
+            } else {
+                showHideBtn.style.paddingLeft = '0.4rem';
+            }
             showHideBtn.style.backgroundColor = 'rgba(0,0,0,0.5)';
         });
         showHideBtn.addEventListener('mouseout', function () {
-            showHideBtn.style.paddingLeft = '0.2rem';
+            if (window.innerWidth <= 600) {
+                showHideBtn.style.paddingLeft = '1rem';
+            } else {
+                showHideBtn.style.paddingLeft = '0.2rem';
+            }
             showHideBtn.style.backgroundColor = 'rgba(0,0,0,0.3)';
         });
         showHideBtn.addEventListener('click', function () {
