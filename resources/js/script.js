@@ -56,9 +56,11 @@ const app = {
             if (header.classList.contains('hide')) {
                 header.classList.remove('hide');
                 header.classList.add('hidden-menu');
+                showHideBtn.innerHTML = '&#8249;';
             } else {
                 header.classList.remove('hidden-menu');
                 header.classList.add('hide');
+                showHideBtn.innerHTML = '&#8250;';
             }
         });
     })()
