@@ -2,7 +2,7 @@ const about = {
     content: `
         <div id="about">
             <h2>About</h2>
-            <p>Bruno Domingues, based in Lisbon</p>
+            <p>Bruno Domingues, Lisbon based Master of nothing!</p>
         </div>
     `
 }
